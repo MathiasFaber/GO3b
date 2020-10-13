@@ -8,7 +8,7 @@ class user {
         this.email = email;
         this.password = password;
         this.uniqueUserID = uniqueUserID;
-        //like funktion
+        //like funktion 123
     };
     
     // Denne funktion skal skabe et unikt bruger-ID når person opretter sig i dating appen.
