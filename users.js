@@ -10,7 +10,7 @@ class user {
         this.uniqueUserID = uniqueUserID;
         //like funktion (ænddring lol)
     };
-    //hejsa
+    //hejsa med digsa!!
     // Denne funktion skal skabe et unikt bruger-ID når person opretter sig i dating appen.
     //Funktionen giver bruger 1 nr. 1 og bruger 2 nr 2 osv. 
     var add = (function () {
