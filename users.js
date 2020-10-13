@@ -8,67 +8,47 @@ class user {
         this.email = email;
         this.password = password;
         this.uniqueUserID = uniqueUserID;
-        //like funktion (ænddring lol)
+        //like funktion 
     };
-    //hejsa med digsa!!
+    
     // Denne funktion skal skabe et unikt bruger-ID når person opretter sig i dating appen.
     //Funktionen giver bruger 1 nr. 1 og bruger 2 nr 2 osv. 
-    var add = (function () {
+    generateUserID (){
         var counter = 0;
         return function () {counter += 1; return counter}
-      })();
-
-    
-    //Denne funktion skal lade brugerne like hinanden. Funktionen skal bruges senere i Match funktionen.
-    var like = function(){
-        
     }
-
 
 }
 
-class paymentuser extends user{
-    constructor(name, birthday, gender, location)
+class paymentUser extends user{
+    constructor(name, birthday, gender, location, email, password, uniqueUserID, cardHolderName, expireDate, cardNumber, cvcNumber)
     {
-    super(name, birthday, gender, location)
+    super(name, birthday, gender, location, email, password, uniqueUserID, cardHolderName)
+        this.expireDate = expireDate;
+        this.cardNumber = cardNumber;
+        this.cvcNumber = cvcNumber;
     // add super like eller sådan noget
     }
 }
 
-class creditcard{
-    constructor(cardHolderName, expireDate, cardNumber, cvcNumber)
-    {
-        this.cardHolderName = cardHolderName;
-        this.expireDate = expireDate;
-        this.cardNumber = cardNumber;
-        this.cvcNumber = cvcNumber;
-    }
-}
 
 class freeUser extends user{
-    constructor(name, birthday, gender, location)
+    constructor(name, birthday, gender, location, email, password, uniqueUserID)
     {
-        super(name, birthday, gender, location)
+        super(name, birthday, gender, location, email, password, uniqueUserID)
     }
 }
 
-class interest extends user{
-    constructor(name)
-    {
-    super(name)
-    }
-    //method der siger: If a likes b && b likes a = match
-}
+function validatePaid(){
+    var x = document.getElementById("cardNumber").nodeValue;
+    if (x == null){
+        var newUser = new freeUser ("Mathias", [2000, 02, 02], "Male", "Denmark", "mafaber@hotmail.dk", "hej123", 1);
 
-class match extends interest{
-    constructor(name)
-    {
-    super(name)
+    } else{
+        var newUSer = new paymentUser ("Mathias", [2000, 03, 03], "Male", "Sweden", "Mafaber@hotmail.dk", "hej234", 2, "Mathias Faber Kristiansen", [2022, 01, 01], 1234567891234567, 123);
     }
-
-    //Method sammenlinger crud fra brugere. Hvis a har liket b og b har liket a, er der et match. 
 }
 
 
 
-//CRUD hvor 
+
