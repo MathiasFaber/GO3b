@@ -49,7 +49,30 @@ function validatePaid(){
     }
 }
 
+class interest extends user {
+    constructor(name)
+    super(name)
+    // Hvis personen liker, CRUD til en liste med alle folk som de liker
+}
 
+//Et tomt array hvor alle de brugere (ID), som man liker, bliver pushet til.
+var likedUsers = [];
 
+class match extends interest {
+    constructor(name)
+    super(name)
+    //Metoder som sammenligner de forskellige CRUD endpoints for forskellige personer og derved laver matches.
+    //Dette giver access til besked funktionen. 
+}
 
-
+// Like funktionen skal pushe personer der er blevet liket til det tomme array med variablen likedUsers.
+function like() {
+    // Disse to varibale nedenfor skal repræsentere swipe right (like) og swipe left (disslike) funktionen på tinder
+    // Jeg har lavet det som hhv like og dislike knap.
+    let likeBtn = document.getElementById("likeBtn");
+    let disslikeBtn = document.getElementById("disslikeBtn");
+    // Her laves en eventlistener
+    likeBtn.addEventListener(onclick,()=>{
+        likedPersons.push(userLike.uniqueUserID)
+    })
+};
