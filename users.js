@@ -39,6 +39,7 @@ class freeUser extends user{
     }
 }
 
+// En funktion som validerer hvorvidt en nyoprettet bruger er en freeuser eller en paymentuser
 function validatePaid(){
     var x = document.getElementById("cardNumber").nodeValue;
     if (x == null){

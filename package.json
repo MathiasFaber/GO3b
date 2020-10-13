@@ -2,7 +2,7 @@
   "name": "go3",
   "version": "1.0.0",
   "description": "",
-  "main": "GO3.js",
+  "main": "GO3server.js",
   "scripts": {
     "start": "nodemon server.js"
   },
